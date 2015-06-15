@@ -10,3 +10,8 @@ Text Domain: admin-ux
 Domain Path: /languages
 */
 
+define( 'adminux_domain', 'admin-ux');
+
+require_once "lib/filters.php";
+require_once "lib/class-posts.php";
+
