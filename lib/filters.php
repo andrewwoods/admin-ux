@@ -19,7 +19,7 @@
  * @param int $max_length the maximum number of characters a title should be.
  * @return int
  */
-function adminux_title_max_length( $max_length ) {
+function admin_ux_title_max_length( $max_length ) {
 	$minimum_length = 20;
 
 	// It's probably not useful/meaningful if the title

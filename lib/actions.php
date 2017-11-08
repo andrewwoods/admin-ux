@@ -30,7 +30,7 @@ function admin_ux_load_edit_posts_js( $hook ) {
  *
  * @return void
  */
-function generate_js_snippet() {
+function admin_ux_generate_js_snippet() {
 	$screen = get_current_screen();
 	if ( 'post' === $screen->id || 'page' === $screen->id ) {
 		$default_length = 50;
@@ -41,7 +41,6 @@ function generate_js_snippet() {
 		?>
 		<script>
 			var AdminUX = <?php echo wp_json_encode( $data ); ?>;
-			;
 		</script>
 		<?php
 	}
