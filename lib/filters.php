@@ -31,3 +31,11 @@ function adminux_title_max_length( $max_length ) {
 	return $max_length;
 }
 
+/**
+ * Retrieve the URL for you custom login logo.
+ *
+ * @return string
+ */
+function admin_ux_login_logo_url() {
+	return get_bloginfo( 'url' );
+}

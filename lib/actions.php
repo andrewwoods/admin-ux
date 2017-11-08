@@ -47,3 +47,24 @@ function generate_js_snippet() {
 	}
 }
 
+/**
+ * Retrieve the URL to the new
+ */
+function admin_ux_login_image_url() {
+	$image_url = get_stylesheet_directory_uri() . '/img/logo-ring-150.png';
+?>
+<style>
+	#login h1 a,
+	.login h1 a {
+		background-image: url(<?php echo $image_url; ?>);
+	}
+</style>
+<?php
+}
+
+/**
+ * Load the login stylesheet to update the login form appearance.
+ */
+function admin_ux_login_styles() {
+	wp_enqueue_style( 'admin_ux_post_css', ADMIN_UX_ASSETS_URL . 'custom.css' );
+}

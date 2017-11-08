@@ -39,6 +39,8 @@ define( 'ADMIN_UX_LIB_DIR', ADMIN_UX_DIR . 'lib/' );
  */
 add_action( 'admin_footer', 'generate_js_snippet' );
 add_action( 'admin_enqueue_scripts', 'admin_ux_load_edit_posts_js' );
+add_action( 'login_enqueue_scripts', 'admin_ux_login_styles' );
+add_action( 'login_enqueue_scripts', 'admin_ux_login_image_url' );
 
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -46,7 +48,7 @@ add_action( 'admin_enqueue_scripts', 'admin_ux_load_edit_posts_js' );
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 add_filter( 'adminux_max_post_title_length', 'adminux_title_max_length', 10, 1 );
-
+add_filter( 'login_headerurl', 'admin_ux_login_logo_url' );
 
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
